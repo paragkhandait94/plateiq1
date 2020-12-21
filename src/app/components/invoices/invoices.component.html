@@ -1,0 +1,116 @@
+<section>
+    <div class="top-button-row">
+        <button mat-button class="direct-button">
+            <i class="envelope-solid"></i>
+            DIRECT</button>
+        <button mat-button class="approve-button">
+            Approve
+        </button>
+        <div style="float: right">
+            <button mat-button class="more-button" (click)="toggleOptions()">
+                More
+                <i class="caret-down"></i>
+            </button>
+            <div *ngIf="showMoreOptions" class="more-options-box">
+                <div class="margin-15">Export</div>
+                <div class="margin-15">Mark as exported</div>
+                <div class="margin-15">Setup Vendor</div>
+                <div class="margin-15">Flag Invoice
+                    <span style="float: right;" class="flag-solid"></span>
+                </div>
+                <div class="margin-15">Archive Invoice
+                    <span style="float: right;" class="archive-solid"></span>
+                </div>
+                <div class="margin-15">Delete Invoice
+                    <span style="float: right;" class="delete-solid"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!showInvoiceInfo">
+        <div style="width: 100%; clear: both; margin-top: 20px;">
+            <span style="font-size: 35px; font-weight: 600;">Ferguiso Cheese</span>
+            <button class="circle-btn" (click)="toggleInvoiceInfo()">
+                <i class="angle-down" style="margin: 0px"></i></button>
+        </div>
+
+        <div class="card-container">
+            <div class="card-small">00003526</div>
+            <div class="card-small">Jul 9,2017</div>
+            <div class="card-small" style="width: 35%;">Monty's Cheese Shopee
+                <span style="margin-left: 15px; color: grey;">Address Cheese</span>
+            </div>
+            
+            <div class="card-small" style="width: 25%; margin-top: -13px;">
+                <span style="font-size: 15px; color: grey">TOTAL</span>
+            <span style="margin-left: 15px; font-size: 30px;">$10,000.00</span>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="showInvoiceInfo">
+        
+        <div style="width: 100%; clear: both; margin-top: 20px;">
+            <div style="font-size: 12px; color:grey; font-weight: 600;">VENDOR</div>
+            <span style="font-size: 35px; font-weight: 600;">Ferguiso Cheese</span>
+            <button class="circle-btn" (click)="toggleInvoiceInfo()">
+                <i class="angle-up" style="margin: 0px"></i>
+            </button>
+            <div style="font-size: 15px; font-weight: 600; color: #3bc9af;">This vendor is mapped</div>
+        </div>
+
+        <div class="card-container">
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">INVOICE NO.</div>
+            <div class="margin-top-15">00003526</div>
+        </div>
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">INVOICE TYPE</div>
+            <div class="margin-top-15">Receipt</div>
+        </div>
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">RESTAURANT</div>
+            <div class="margin-top-15">Monty's Cheese Shop</div>
+        </div>
+        
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">SUBTOTAL</div>
+            <span class="invoice-subtotal-value">$1300</span>
+            <div class="invoice-header margin-top-23">TAX</div>
+            <span class="invoice-subtotal-value">$26.32</span>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">POSTING DATE</div>
+            <div class="margin-top-15">JULY 14, 2017</div>
+        </div>
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">INVOICE DATE</div>
+            <div class="margin-top-15">JULY 09, 2017</div>
+        </div>
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div class="invoice-header">DUE DATE</div>
+            <div class="margin-top-15">SEPT 09, 2017</div>
+        </div>
+        
+        <div class="card-small-25">
+            <div class="dotted-border-top"></div>
+            <div style="margin-top: 15px;" class="invoice-header">TOTAL</div>
+            <span class="invoice-subtotal-value">$10,000.00</span>
+        </div>
+
+      </div>
+      <div class=" card-container dotted-border-top"></div>
+
+    </div>
+</section>

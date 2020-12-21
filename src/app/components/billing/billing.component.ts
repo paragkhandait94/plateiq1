@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-billing',
+  templateUrl: './billing.component.html',
+  styleUrls: ['./billing.component.css']
 })
-export class AppComponent {
+export class BillingComponent {
+
   title = 'plateiq1';
   columnDefs = [
     {
@@ -47,5 +48,6 @@ export class AppComponent {
   ];
 
 
-  
+
+
 }
